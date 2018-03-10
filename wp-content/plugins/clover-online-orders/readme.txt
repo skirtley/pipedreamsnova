@@ -3,9 +3,9 @@ Contributors: merchantech
 Donate link: http://www.merchantapps.com/
 Tags: clover,online orders for clover,merchantech online orders,Clover online orders, Online orders for Clover, Wordpress and Clover,Clover, online ordering for clover, online order for clover pos, Online ordering for Clover POS,clover POS
 Requires at least: 4.7.1
-Tested up to: 4.8.1
+Tested up to: 4.9.4
 Requires PHP: 5.2.0
-Stable tag: 1.2.81
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,9 +57,7 @@ You can add your menu in a new post/page or an existing one using this shortcode
 
 `[moo_all_items]`
 
-To display items for one category
-
-`[moo_all_items category="cat_id"]` : replace the cat_id with the category's id
+Or [moo_cart]` or [moo_checkout]` for cart and checkout page
 
 = VIDEO =
 [youtube https://www.youtube.com/watch?v=DHw2oppC6IU]
@@ -91,19 +89,16 @@ No, this plug-in is not by Clover. It is from Merchantech. Both this plug-in and
 
 Please let us know so we can implement additional features.  925-234-5554 / support@merchanteh.us
 
-== Screenshots ==
-
-1. Example of menu 'style1'
-2. Example of checkout page
-3. Dashboard of the plug-in
-4. Example of menu with images
-5. Example of menu with images
-6. Add to cart button
-7. An other example of menu
-
 == Changelog ==
-= 1.2.81 =
-* Fixed css issues in Store interface 3
+= 1.3.0 =
+* Added new Store Interface “Store Interface 5”
+* Added reports feature
+* Fixed issue where the store interface wasn’t appearing correctly on Internet Explorer and Microsoft edge browsers
+* Fixed issue where ‘$’ symbol would cut off remaining text on printed receipt
+* Fixed issue where for new installs the address on map would point to New York instead of actual location
+* Added additional FAQ
+* Added the following shortcode to be used with Store Interface 4 so it can load on iPhone Apps [moo_all_items js_loading='false' interface="si4"]
+* Other various fixes and improvements
 = 1.2.80 =
 * Added the clean inventory feature
 * Improved the store interface 4 to accept direct links to a specif category
@@ -119,6 +114,7 @@ Please let us know so we can implement additional features.  925-234-5554 / supp
 * Changed add to cart button on store interface 4 and added the number of items in cart
 * Ability to hide quantity selection from modifiers with prices or modifiers with no prices for store interface 4
 * Ability to show modifiers as a pop-up or directly underneath the item for store interface 4
+
 = 1.2.7 =
 * Added two new store interfaces
 * Store interface 3 has a beautiful interface that allows images to be uploaded for items in a vertical format
@@ -261,5 +257,5 @@ First Release
 
 == Upgrade Notice ==
 
-= 1.2.81 =
-A new update to fix a small issues in the version 1.2.80
+= 1.3.0 =
+Various fixes and improvements

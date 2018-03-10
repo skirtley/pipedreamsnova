@@ -37,6 +37,7 @@ jQuery(document).ready(function()
 
     /* a listener when scrolling to fix the tha category section */
     jQuery(window).scroll(function(){
+        var container_top = jQuery('#moo_OnlineStoreContainer').offset().top;
         if (jQuery(window).scrollTop() > (container_top-header_height))
         {
             //console.log(navigator.userAgent);
@@ -66,6 +67,10 @@ jQuery(document).ready(function()
 function MooLoadBaseStructure(elm_id,callback)
 {
     var html = '<div class="moo-row">'+
+        '<div  class="moo-is-sticky moo-new-icon" onclick="mooShowCart(event)">' +
+        '<div class="moo-new-icon__count" id="moo-cartNbItems">'+((window.nb_items_in_cart>0)?window.nb_items_in_cart:'')+'</div>' +
+        '<div class="moo-new-icon__cart">' +
+        '</div></div>'+
         '<div id="MooLoadingSection" style="text-align: center;font-size: 20px;display:none">Loading, please wait ...</div>'+
         '</div>'+
         '<div class="moo-row">'+
@@ -74,22 +79,9 @@ function MooLoadBaseStructure(elm_id,callback)
         '<div class="moo-col-md-9" id="moo-onlineStore-items">'+
         '</div>'+
         '</div>';
-
-    var html_cart = '<div id="moo_cart">'+
-        '<a href="#" onclick="mooShowCart(event)">'+
-        '<div id="moo_cart_icon">'+
-        '<span>VIEW CART</span>'+
-        '</div></a></div>';
-    var cart_icon = '<div  class="moo-is-sticky  moo-new-icon" onclick="mooShowCart(event)">' +
-                    '<div class="moo-new-icon__count" id="moo-cartNbItems">'+((window.nb_items_in_cart>0)?window.nb_items_in_cart:'')+'</div>' +
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="moo-new-icon__cart-panier" viewBox="0 0 25 25" enable-background="new 0 0 25 25">' +
-                    '<g class="moo-new-icon__group"><path d="M24.6 3.6c-.3-.4-.8-.6-1.3-.6h-18.4l-.1-.5c-.3-1.5-1.7-1.5-2.5-1.5h-1.3c-.6 0-1 .4-1 1s.4 1 1 1h1.8l3 13.6c.2 1.2 1.3 2.4 2.5 2.4h12.7c.6 0 1-.4 1-1s-.4-1-1-1h-12.7c-.2 0-.5-.4-.6-.8l-.2-1.2h12.6c1.3 0 2.3-1.4 2.5-2.4l2.4-7.4v-.2c.1-.5-.1-1-.4-1.4zm-4 8.5v.2c-.1.3-.4.8-.5.8h-13l-1.8-8.1h17.6l-2.3 7.1z"></path><circle  cx="9" cy="22" r="2"></circle><circle cx="19" cy="22" r="2"></circle></g>' +
-                    '</svg></div>';
-
     /* Adding the structure the the html page */
     jQuery(elm_id).html(html);
-    //jQuery('html body').prepend(html_cart);
-    jQuery('html body').prepend(cart_icon);
+
 
     //Adding add to back button
     if(window.moo_theme_setings.onePage_backToTop != null)
@@ -194,9 +186,6 @@ function moo_renderCategories($cats)
                 jQuery(".moo-nav-menu li a").css("font-family",window.moo_theme_setings.onePage_fontFamily );
                 jQuery(".moo-menu-category .moo-menu-category-title .moo-title").css("font-family",window.moo_theme_setings.onePage_fontFamily );
             }
-
-
-
         }
     });
 }
@@ -248,7 +237,7 @@ function moo_renderItems(category)
         else
         {
             html += '    <div class="moo-col-lg-4 moo-col-md-4 moo-col-sm-12 moo-col-xs-12 moo-text-sm-right">'+
-                '    <span>$'+item_price+'</span>';
+                '    <span class="moo-price">$'+item_price+'</span>';
         }
 
         if(item.stockCount == "out_of_stock")
@@ -288,8 +277,9 @@ function moo_renderItems(category)
         html += '</div>'+
                 '</div>';
     }
+    category.name.replace("'","");
     if(category.five_items.length == 5)
-    html += '<div class="moo-menu-item moo-menu-list-item"><div class="moo-row moo-align-items-center"><a href="#" class="moo-bt-more moo-show-more" onclick="mooClickOnLoadMoreItems(event,\''+category.uuid+'\',\''+category.name+'\')"> Show More </a><i class="fa fa-chevron-down" aria-hidden="true" style=" display: block; "></i></div></div>';
+    html += '<div class="moo-menu-item moo-menu-list-item"><div class="moo-row moo-align-items-center"><a href="#" class="moo-bt-more moo-show-more" onclick="mooClickOnLoadMoreItems(event,\''+category.uuid+'\',\''+category.name+'\')"> Show More </a><i class="fa fa-chevron-down" aria-hidden="true" style=" display: block; color:red "></i></div></div>';
     html    += "</div>";
 
     jQuery(element).append(html).promise().then(function () {
@@ -318,6 +308,7 @@ function mooClickOnLoadMoreItems(event,cat_id,cat_name)
                 var item_price = parseFloat(item.price);
                 item_price = item_price/100;
                 item_price = item_price.toFixed(2);
+
                 if(item.price > 0 && item.price_type == "PER_UNIT")
                     item_price += '/'+item.unit_name;
 
@@ -349,7 +340,7 @@ function mooClickOnLoadMoreItems(event,cat_id,cat_name)
                 else
                 {
                     html +=     '    <div class="moo-col-lg-4 moo-col-md-4 moo-col-sm-12 moo-col-xs-12 moo-text-sm-right">'+
-                        '    <span>$'+item_price+'</span>';
+                        '    <span class="moo-price">$'+item_price+'</span>';
                 }
 
                 if(item.stockCount == "out_of_stock")
@@ -450,7 +441,6 @@ function mooOpenQtyWindow(event,item_id,stockCount,callback)
         }
     }).then(function () {},function (dismiss) {});
 }
-
 function mooOpenCustomQtyWindow(event,item_id,callback)
 {
     swal({
