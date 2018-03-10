@@ -1,0 +1,293 @@
+/* Global settings */
+/* Global "table" column settings */
+.moo-product-image {
+    float: left;
+    width: 20%;
+}
+
+.moo-product-details {
+    float: left;
+    width: 37%;
+}
+
+.moo-product-price {
+    float: left;
+    width: 12%;
+}
+
+.moo-product-quantity {
+    float: left;
+    width: 10%;
+}
+
+.moo-product-removal {
+    float: left;
+    width: 9%;
+}
+
+.moo-product-line-price {
+    float: right;
+    text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.moo-group:before, .moo-shopping-cart:before, .moo-column-labels:before,.moo-column-labels-checkout:before, .moo-product:before, .moo-totals-item:before,
+.moo-group:after,
+.moo-shopping-cart:after,
+.moo-column-labels:after,.moo-column-labels-checkout:after,
+.moo-product:after,
+.moo-totals-item:after {
+    content: '';
+    display: table;
+}
+
+.moo-group:after, .moo-shopping-cart:after, .moo-column-labels:after,.moo-column-labels-checkout:after, .moo-product:after, .moo-totals-item:after {
+    clear: both;
+}
+
+.moo-group, .moo-shopping-cart, .moo-column-labels,.moo-column-labels-checkout, .moo-product, .moo-totals-item {
+    zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.moo-product .moo-product-price:before, .moo-product .moo-product-line-price:before, .moo-totals-value:before {
+   /* content: '$'; */
+}
+
+.moo-shopping-cart {
+    background-color: #fff;
+    padding: 20px;
+    color : #000000;
+    font-size: 15px;
+}
+
+/* Column headers */
+.moo-column-labels,.moo-column-labels-checkout {
+    font-weight: bold;
+}
+.moo-column-labels label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.moo-column-labels .product-image,.moo-column-labels-checkout .product-image, .column-labels .product-details, .column-labels .product-removal {
+    text-indent: -9999px;
+}
+
+/* Product entries */
+.moo-product {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.moo-product .moo-product-image {
+    text-align: center;
+}
+.moo-product .moo-product-image img {
+    width: 100px;
+}
+.moo-product .moo-product-details .moo-product-title {
+    margin-right: 20px;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+    font-size: 18px;
+
+}
+.moo-product .moo-product-details .moo-product-description {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+}
+.moo-product .moo-product-quantity input {
+    width: 60px !important;
+    padding: 2px;
+    background-color: #f5f5f5;
+}
+.moo-product .moo-remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #c66;
+    color: #fff !important;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.moo-product .moo-remove-product:hover {
+    background-color: #a44;
+}
+
+/* Totals section */
+.moo-totals .moo-totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.moo-totals .moo-totals-item label {
+    float: left;
+    clear: both;
+    width: 70%;
+    text-align: right;
+}
+.moo-totals .moo-totals-item .moo-totals-value {
+    float: right;
+    width: 30%;
+    text-align: right;
+}
+.moo-checkout {
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #6b6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
+}
+.moo-continue-shopping {
+     float: left;
+     border: 0;
+     /* margin-top: 20px; */
+     padding: 6px 25px;
+     background-color: #6675bb;
+     color: #fff;
+     font-size: 16px;
+     border-radius: 3px;
+}
+
+.moo-checkout:hover {
+    background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+    .moo-shopping-cart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .moo-column-labels {
+        display: none;
+    }
+    .moo-column-labels-checkout {
+        margin-top: 10px;
+    }
+
+    .moo-product-image {
+        float: right;
+        width: auto;
+    }
+    .moo-product-image img {
+        margin: 0 0 10px 10px;
+    }
+
+    .moo-product-details {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+    }
+    .moo-product-details-checkout {
+        float: left !important;
+    }
+
+    .moo-product-price {
+        clear: both;
+        width: 70px;
+    }
+    .moo-product-price-checkout {
+        clear: none !important;
+    }
+
+    .moo-product-quantity {
+        width: 100px;
+    }
+    .moo-product-quantity input {
+        margin-left: 20px;
+    }
+
+    .moo-product-quantity:before {
+        content: 'x';
+    }
+    .moo-product-quantity-checkout:before {
+        content: '' !important;
+    }
+
+    .moo-product-removal {
+        width: auto;
+    }
+
+    .moo-product-line-price {
+        float: right;
+        width: 100%;
+    }
+    .moo-continue-shopping {
+        float: right;
+        border: 0;
+        margin-top: 20px;
+        padding: 6px 25px;
+        background-color: #6675bb;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+    .moo-product-removal {
+        float: right;
+    }
+
+    .moo-product-line-price {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .moo-product .moo-product-line-price:before {
+        content: 'Item Total: $';
+    }
+
+    .moo-totals .moo-totals-item label {
+        width: 60%;
+    }
+    .moo-totals .moo-totals-item .moo-totals-value {
+        width: 40%;
+    }
+    .moo-continue-shopping {
+        float: right;
+        border: 0;
+        margin-top: 20px;
+        padding: 6px 25px;
+        background-color: #6675bb;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+}
+
+.moo-product-removal-checkout {
+    float: right;
+}
+
+.moo-product-line-price-checkout {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+}
+
+.moo-product .moo-product-line-price-checkout:before {
+    content: 'Item Total: $';
+}
+
+.moo-totals .moo-totals-item-checkout label {
+    width: 60%;
+}
+.moo-totals .moo-totals-item .moo-totals-value-checkout {
+    width: 40%;
+}
+
