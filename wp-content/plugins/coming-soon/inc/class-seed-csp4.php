@@ -214,7 +214,7 @@ class SEED_CSP4{
         if(!defined('DONOTCACHEOBJECT')) {
           define('DONOTCACHEOBJECT', true);
         }
-        header('Cache-Control: max-age=0; private');
+        nocache_headers();
 
 
         // render template tags

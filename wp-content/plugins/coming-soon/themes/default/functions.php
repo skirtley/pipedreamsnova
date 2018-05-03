@@ -168,12 +168,32 @@ function seed_csp4_head() {
 
 
     <?php if ( !empty( $link_color ) ) { ?>
-		.seed-csp4 a, .seed-csp4 a:visited, .seed-csp4 a:hover, .seed-csp4 a:active{
+		.seed-csp4 a, .seed-csp4 a:visited, .seed-csp4 a:hover, .seed-csp4 a:active, .seed-csp4 a:focus{
 			color:<?php echo $link_color;?>;
 		}
 
 
-    <?php }
+    <?php } ?>
+
+    
+    <?php if ( !empty( $bg_image ) ): ;?>
+    	<?php if ( isset( $bg_cover ) && in_array( '1', $bg_cover ) ) : ?>
+	@supports (-webkit-overflow-scrolling: touch) {
+		html {
+		height: 100%;
+		overflow: hidden;
+		}
+		body
+		{
+		height:100%;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		}
+	}
+		<?php endif; ?>
+	<?php endif; ?>
+
+    <?php 
 
 	$output .= ob_get_clean();
 

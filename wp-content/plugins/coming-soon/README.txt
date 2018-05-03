@@ -3,8 +3,8 @@ Contributors: seedprod
 Donate link: http://www.seedprod.com
 Tags: maintenance mode, coming soon page, coming soon, under construction, launch page, launch, maintenance, construction, offline, unavailable, under construction page, landing page
 Requires at least: 3.5.1
-Tested up to: 4.9.1
-Stable tag: 5.0.17
+Tested up to: 4.9.4
+Stable tag: 5.0.19
 Text Domain: coming-soon
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -116,6 +116,12 @@ This is always a caching issue. Go to the caching plugin's setting page and clea
 4. Design Page
 
 == Changelog ==
+= 5.0.19 =
+* fixed z-index issue with supersize loader and focus link color
+
+= 5.0.18 =
+* fixed ios issue and no cache header issue
+
 = 5.0.17 =
 * Changed credit image
 
@@ -203,6 +209,12 @@ This is always a caching issue. Go to the caching plugin's setting page and clea
 * Initial Commit
 
 == Upgrade Notice ==
+= 5.0.19 =
+* fixed z-index issue with supersize loader and focus link color
+
+= 5.0.18 =
+* fixed ios issue and no cache header issue
+
 = 5.0.17 =
 * Changed credit image
 
