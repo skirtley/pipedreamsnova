@@ -430,8 +430,8 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             if( $lang ) {
                 $url_args['lang'] = $lang;
             }
-
-            return apply_filters( 'yith_woocompare_view_table_url', esc_url_raw( add_query_arg( $url_args, site_url() ) ), $product_id );
+            // fix by WPML
+            return apply_filters( 'yith_woocompare_view_table_url', esc_url_raw( add_query_arg( $url_args, remove_query_arg( 'wc-ajax' ) ) ), $product_id );
         }
 
         /**

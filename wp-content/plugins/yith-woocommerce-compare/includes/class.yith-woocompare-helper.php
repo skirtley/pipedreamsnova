@@ -42,6 +42,15 @@ if( !class_exists( 'YITH_Woocompare_Helper' ) ) {
          */
         public static function standard_fields( $with_attr = true ) {
 
+            global $sitepress;
+
+            $lang = isset( $_REQUEST['lang'] ) ? $_REQUEST['lang'] : false;
+
+            if( defined( 'ICL_LANGUAGE_CODE' ) && $lang && isset( $sitepress ) ) {
+                $sitepress->switch_lang( $lang, true );
+            }
+
+
 	        $fields = array(
                 'image' => __( 'Image', 'yith-woocommerce-compare' ),
                 'title' => __( 'Title', 'yith-woocommerce-compare' ),
