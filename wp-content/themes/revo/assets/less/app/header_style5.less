@@ -1,0 +1,78 @@
+.home-style5{
+
+}
+
+.header-style5{
+	.header-top{
+		background-color:#f2f2f2;
+		border:0;
+		.header-message{
+			color:lighten( @body-color, 14% );
+		}
+		.top-login ul li a{
+			color:lighten( @body-color, 14% );
+			border-left:1px solid #ddd;
+		}
+		.widget_nav_menu h3{
+			color:lighten( @body-color, 14% );
+			border-left:1px solid #ddd;
+		}
+	}
+	.revo_top .top-form.top-search{
+		.cat-wrapper{
+			height:44px;
+			select{
+				height:44px;
+			}	
+		}
+		input{
+			height:44px;
+			line-height:44px;
+		}
+		button.form-button{
+			background-color:@color - #032029;
+			&:hover{
+				background-color:@color - #032029;
+				&:before{
+					color:#999;
+				}
+			}
+		}
+	}
+	#lang_sel > ul.nav > li > a{
+		color:lighten( @body-color, 14% );
+		border-left:1px solid #ddd;
+	}
+	.currency_w > li > a{
+		border-left:1px solid #ddd;
+		color:lighten( @body-color, 14% );
+	}
+	.header-mid{
+		background-color:@color;
+		.contact-us{
+			color:#fff;
+			background: url("../assets/img/bg_general.png") no-repeat -20px -1955px;
+			.rtl &{
+				background: url("../assets/img/bg_general.png") no-repeat 161px -1955px;
+			}
+			.text, .phone, a{
+				color:#fff;
+			}
+		}
+	}
+	.header-bottom{
+		background-color:@color - #032029;
+		.widget_nav_menu ul.menu > li {
+			margin:12px 5px;
+			> a{
+				border:0;
+			}
+		}
+	}
+	.top-form.top-form-minicart{
+		padding:12px 10px 10px 5px;
+		.rtl &{
+			padding:13px 10px 10px 5px;
+		}
+	}
+}

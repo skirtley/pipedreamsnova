@@ -1,0 +1,227 @@
+
+body.sw-maintaince > .body-wrapper{
+	 background: url('../img/maintaince/bg-main.jpg') no-repeat center center;
+    text-align: center;
+    color: #fff;
+	position: relative;
+	background-size: cover;
+	z-index: 1;
+}
+
+body.sw-maintaince .body-wrapper{
+	overflow:visible;
+}
+body.sw-maintaince > .body-wrapper:before{
+	background: rgba(0,0,0, 0.6);
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+body.sw-maintaince > .body-wrapper > div{
+	position: relative;
+	z-index: 2;
+}
+.header-maintaince .header-logo a{
+	display:inline-block;
+	margin:20px 0 100px;
+}
+.page-top .title-header h2{
+	font-size:46px;
+	color:#fff;
+	font-family:RalewayExtraBold;
+}
+
+.page-top .title-header span.flag{
+	color:#faa600;
+}
+
+.page-top .description{
+	font-family:'Raleway';
+	font-size:15px;
+	color:#b3b3b3;
+	margin:25px 0 35px;
+	line-height:28px;
+}
+
+/*==MAIN==*/
+
+.countdown-container{
+	margin:55px 0;
+}
+
+.countdown-container .ClassyCountdown-wrapper > div{
+	width:130px;
+	height:130px;
+	margin:15px;
+}
+
+.countdown-container  .ClassyCountdown-wrapper .ClassyCountdown-value{
+	font-size:36px !important;
+	margin-top:-30px !important;
+}
+
+.countdown-container .ClassyCountdown-wrapper >  div  > .ClassyCountdown-value span{
+	font-size:20px !important;
+	text-transform:uppercase;
+	color:#949494;
+}
+
+.countdown-container .ClassyCountdown-wrapper >  div  > .ClassyCountdown-value div{
+	font-size:48px !important;
+	text-transform:uppercase;
+	color:#fff;
+}
+
+.page-bottom .form-subscribers .form-wrap .mc4wp-form .mc4wp-form-fields{
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+}
+
+.page-bottom .form-subscribers input[type="email"]{
+	border:1px solid rgba(255,255,255,0.3);
+	border-radius:5px;
+	height:52px;
+	font-size:14px;
+	padding-left:60px;
+	font-family:'Open Sans';
+	font-weight:300;
+	background-color:transparent;
+	width:480px;
+	background: url('../img/maintaince/icons/icon-mail.png') no-repeat left 10px center;
+	color:#fff;
+}
+
+.page-bottom .form-subscribers input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+
+.page-bottom .form-subscribers input::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+
+.page-bottom .form-subscribers  input[type="submit"]{
+	position:absolute;
+	top:0;
+	right:0;
+	border:0;
+	width:21px;
+	height:21px;
+	margin:15px 20px;
+	text-indent:-9999px;
+	background: url('../img/maintaince/icons/icon-submit.png') no-repeat center center;
+}
+
+.copyright{
+    background: transparent;
+    color: #7d7d7d;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copyright address{
+    margin:0;
+	font-family:'Open Sans';
+	font-weight:400;
+}
+
+.copyright address a{
+	color:#faa600;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1445px) and (max-width: 1920px) {
+
+}
+@media  (max-width: 1445px) {
+
+	
+}
+@media (min-width: 1370px) and (max-width: 1445px) {
+
+}
+@media  (max-width: 1366px) {
+
+}
+
+@media (min-width: 1190px) and (max-width: 1366px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.header-maintaince .header-logo a{
+		margin:20px 0 30px;
+	}
+	.page-top .description{
+		margin:25px 0 35px 0;
+	}
+	.revo-socials  ul{
+		margin:20px 0 10px;
+	}
+	.countdown-container{
+		margin:50px 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.countdown-container .ClassyCountdown-wrapper > div{
+			width:100px;
+	}
+	.countdown-container .ClassyCountdown-wrapper >  div  > .ClassyCountdown-value div{
+		font-size:36px !important;
+	}
+	.countdown-container .ClassyCountdown-wrapper >  div  > .ClassyCountdown-value span{
+			font-size:16px !important; 
+	}
+	.countdown-container .ClassyCountdown-wrapper >  div  > .ClassyCountdown-value{
+			margin-top:-35px !important; 
+	}
+}
+@media (max-width: 480px) {
+	.page-top .title-header h2{
+			font-size:28px;
+			margin-bottom:30px;
+	}
+	.page-bottom .form-subscribers input[type="email"]{
+		width:360px;
+	}
+	.header .header-logo a{
+			margin:20px 0 30px;
+	}
+	.page-bottom  ul > li > a{
+		margin-right:20px;
+	}
+	.page-bottom  ul > li:last-child > a{
+		margin-right:0px;
+	}
+}
+
+@media (max-width: 360px) {
+	.page-bottom .form-subscribers input[type="email"]{
+			width:290px;
+			background-image:none;
+			padding-left:10px;
+	}
+	.page-top .title-header h2{
+		font-size:24px;
+	}
+	.page-bottom  ul > li > a{
+		margin-right:15px;
+	}
+}

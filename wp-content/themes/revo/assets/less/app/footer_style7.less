@@ -1,0 +1,296 @@
+.bg-touch{
+	background: @color;
+	.get-touch{
+		padding: 31px 0 30px;
+		.des{
+			font-weight: 500;
+			font-size: 16px;
+			color: #ffffff;
+			padding: 10px 0;
+		}
+		a{
+			font-weight: 700;
+			font-size: 14px;
+			color: #1c1c1c;
+			text-transform: uppercase;
+			background: #fff;
+			border-radius: 19px;
+			padding: 11.5px 26px;
+		    display: inline-block;
+			vertical-align: top;
+			&:hover{
+				color: @color;
+			}
+		}
+	}
+}
+.footer-style7{
+	background: url("../assets/img/bg-footer7.jpg") no-repeat;
+	background-size: cover;
+	padding: 49px 0 60px;
+	.wpb_content_element 	h3, .widget_nav_menu .widgettitle{
+		.icon-footer{
+			float:right;
+			position:relative;
+			.rtl &{
+				float:left;
+			}
+			&:before{
+				content: '\f0d7';
+				color: #222;
+				font-family: Fontawesome;
+				font-size: 14px;
+				display: inline-block;
+				opacity:0;
+			}
+		}
+	}
+	.footer-logo{
+		img{
+			margin-bottom: 22px;
+		}
+		.des{
+			font-family: Open Sans;
+			font-size: 13px;
+			color: #fff;
+			line-height: 21px;
+			padding-right: 30px;
+			margin: 0 0 44px;
+		}
+	}
+	.socials-footer{
+		display:inline-block;
+		overflow:hidden;
+		h3{
+			display:none;
+			font-size:16px;
+			color:#fff;
+			text-transform:uppercase;
+			font-family:Open Sans;
+			font-weight: bold;
+			margin: 31px 0 21px;
+		}
+		ul{
+			margin: 0;
+			> li{
+				list-style:none;
+				float:left;
+				.rtl &{
+					float:right;
+				}
+				> a{
+					display:inline-block;
+					height:34px;
+					width:34px;
+					line-height:34px;
+					color:@body-color;
+					border-radius:50%;
+					background-color:#fff;
+					text-align:center;
+					margin:0 5px;
+					font-size:16px;
+				}
+				&.face{
+					a{
+						&:hover{
+							color: #fff;
+							background-color: #3b5998; 
+						}
+					}
+				}
+				&.twi{
+					a{
+						&:hover{
+							color: #fff;
+							background-color: #1da1f2; 
+						}
+					}
+				}
+				&.pin{
+					a{
+						&:hover{
+							color: #fff;
+							background-color: #bd081c; 
+						}
+					}
+				}
+				&.inta{
+					a{
+						&:hover{
+							color: #fff;
+							background-color: #3897f0; 
+						}
+					}
+				}
+				&.google{
+					a{
+						&:hover{
+							color: #fff;
+							background-color: #db4437; 
+						}
+					}
+				}
+				&:first-child{
+					a{
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.info-footer{
+		h3{
+			font-size:16px;
+			color:#fff;
+			text-transform:uppercase;
+			font-family:Open Sans;
+			font-weight: bold;
+			margin: 31px 0 21px;
+		}
+		ul{
+			overflow:hidden;
+			margin:-8px 0 0;
+			> li{
+				color: #fff;
+				list-style:none;
+				overflow:hidden;
+				line-height:24px;
+				margin-top:15px;
+				&.email{
+					margin-bottom:22px;
+					line-height:32px;
+					a{
+						color:#fff;
+						&:hover{
+							color:@color;
+						}
+					}
+				}
+				.fa{
+					width:32px;
+					height:32px;
+					background-color: rgba(102,102,102,0.6);
+					color:#fff;
+					line-height:32px;
+					font-size:16px;
+					margin-right:10px;
+					text-align:center;
+					float:left;
+					border-radius:2px;
+					.rtl &{
+						float:right;
+						margin:0 0 0 10px;
+					}
+				}
+				span{
+					display:block;
+					overflow:hidden;
+					line-height:20px;
+				}
+			}
+		}
+	}
+	.widget_nav_menu{
+		.widgettitle{
+			font-size:16px;
+			color:#fff;
+			text-transform:uppercase;
+			font-family:Open Sans;
+			font-weight: bold;
+			margin: 31px 0 21px;
+		}
+		ul.menu{
+			> li{
+				> a{
+					color:#fff;
+					text-transform:capitalize;
+					font-size:13px;
+					position:relative;
+					padding:7px 0px 7px 0px;
+					position:relative;
+					.transition(all 0.3s);
+					display:inline-block;
+					vertical-align:top;
+					&:before{
+						content:'\f105';;
+						font-family:FontAwesome;
+						font-size:14px;
+						margin-right:8px;
+					}
+					.rtl &{
+						&:before{
+							content:'';
+							margin:0;
+						}
+						&:after{
+							content:'\f104';;
+							font-family:FontAwesome;
+							font-size:14px;
+							margin-left:8px;
+						}
+					}
+					&:hover{
+						color:@color;
+						padding-left:15px;
+						.rtl &{
+							padding-right:15px;
+							padding-left:0;
+						}
+					}
+				}
+			}
+		}
+	}
+	.newletter{
+		h3{
+			font-size:16px;
+			color:#fff;
+			text-transform:uppercase;
+			font-family:Open Sans;
+			font-weight: bold;
+			margin: 31px 0 21px;
+		}
+		.des{
+			font-family: Open Sans;
+			font-size: 13px;
+			color: #fff;
+			line-height: 21px;
+			margin: 0 0 25px;
+		}
+		.mc4wp-form{
+			p{
+				margin: 0 0 33px;
+			}
+			.mc4wp-form-fields{
+				input[type="email"]{
+					border:0;
+					color:#8c8c8c;
+					height:40px;
+					padding:0 14px;
+					min-width:201px;
+					border-radius: 19px 0 0 19px;
+					margin: 0;
+				}
+				input[type="submit"]{
+					border:0;
+					background: url("../assets/img/fly.png") no-repeat @color center center;
+					height:40px;
+					min-width:69px;
+					border-radius: 0 19px 19px 0;
+					text-indent: -99999px;
+					&:hover{
+						opacity:0.85;
+					}
+				}
+			}
+		}
+		.app-download{
+			a{
+				float: left;
+				&:first-child{
+					margin: 0 10px 0 0;
+				}
+			}
+		}
+	}	
+}

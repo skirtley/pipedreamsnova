@@ -1,0 +1,118 @@
+/**
+ * Widget Options
+ */
+*, html{
+	outline: none !important;
+}
+.clearfix::before, .clearfix::after {
+    content: " ";
+    display: table;
+}
+.pull-left{
+	float: left;
+}
+.revo-metabox{
+	margin: -6px -12px -12px;
+}
+.revo-metabox a{
+	text-decoration: none;
+}
+.revo-metabox .revo-metabox-content{
+	position: relative;
+	overflow: hidden;
+	background: #eee;
+}
+.revo-metabox .revo-metabox-content .nav-tabs{
+	float: left;
+	width: 20%;
+	background: #eee;
+	margin: 0;
+}
+.revo-metabox .revo-metabox-content .nav-tabs > li{
+	margin: 0;
+}
+.revo-metabox .revo-metabox-content .nav-tabs > li > a{
+	display: block;
+	padding: 10px;
+	color: #444;
+	font-weight: bold;
+}
+.revo-metabox .revo-metabox-content .nav-tabs > li.active > a{
+	background: #fff;
+}
+.revo-metabox .revo-metabox-content .nav-tabs > li + li > a{
+	border-top: 1px solid #fefefe;
+}
+.revo-metabox .revo-metabox-content .tab-content{
+	overflow: hidden;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane{
+	padding: 0;
+	display: none;
+	background: #fff;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane.active{
+	display: block;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner{
+	overflow: hidden;
+	clear: both;
+	padding: 30px 15px;
+	border-bottom: 1px solid #eee;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-description{
+	width: 45%;
+	margin-right: 30px;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-description .flytab-item-title{
+	font-weight: bold;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-description .flytab-item-shortdes{
+	font-style: italic;
+	color: #999;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content{
+	overflow: hidden;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content input[type="text"]{
+	width: 80%;
+	padding: 5px;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio label,
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio-img label{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 5px;
+	text-align: center;
+	position: relative;
+	width: 50px;
+	padding: 5px;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio-img label .page-radio-color{
+	position: absolute;
+	top: 5px;
+	width: 30px;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -15px;
+	height: 30px;
+	
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio-img label .page-radio-color:before{
+	content: '';
+	position: absolute;
+	z-index: 9;
+	top: -5px;
+	left: -15px;
+	height: 80px;
+	right: -15px;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio-img label.revo-radio-img-selected{
+	background: #eee;
+}
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio label span,
+.revo-metabox .revo-metabox-content .tab-content .tab-pane .tab-inner .flytab-content .page-metabox-radio-img label span{
+	display: inline-block;
+	margin-top: 15px;
+	text-transform: capitalize;
+}

@@ -1,0 +1,92 @@
+.sw-quickview-bottom{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+	background: rgba( 0,0,0,0.5 );
+	visibility: hidden;
+	opacity: 0;
+	.transition( all 0.3s ease-out );
+	&.show{
+		visibility: visible;
+		opacity: 1;
+		.quickview-content .quickview-close{
+			visibility: visible;
+		}
+	}
+	&.loading{
+		height: 100%;
+		&:before{
+			background-color: transparent;
+			background-image: url( ../assets/img/loadingp.gif );
+			background-size: 32px 32px;
+		}
+		.quickview-content{
+			.quickview-inner{
+				padding: 0;
+			}
+			.quickview-close{
+				visibility: hidden;
+			}
+		}
+	}
+	.quickview-content{
+		background: #fff;
+		max-width: 1170px;
+		margin: 200px auto;
+		position: relative;
+		.quickview-close{
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			background: #000;
+			color: #fff;
+			text-align: center;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: bold;
+			border-radius: 50%;
+			right: -15px;
+			top: -15px;
+		}
+		.quickview-inner{
+			padding: 30px 15px;
+		}
+	}
+}
+.quickview-container.woocommerce {
+	padding-top: 15px;
+	.slider_img_productd{
+		span.onsale{
+			display:none;
+		}
+	}
+	.product_detail .content_product_detail{
+		padding-bottom:15px;
+	}
+	.product_detail .content_product_detail .yith-wcwl-add-to-wishlist .yith-wcwl-add-button a{
+		border-radius:50% !important;
+		background-image:none;
+		&:hover{
+			background-color:@color !important;
+		}
+	}
+}
+
+@media( max-width: 1400px ){
+	.sw-quickview-bottom{
+		.quickview-content{
+			max-width: 960px;
+		}
+	}
+}
+
+@media( max-width: 991px ){
+	.sw-quickview-bottom{
+		.quickview-content{
+			max-width: 700px;
+		}
+	}
+}

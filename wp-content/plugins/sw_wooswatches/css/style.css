@@ -1,0 +1,98 @@
+.sw-custom-variation input[type="radio"] {
+  display: none;
+}
+.sw-custom-variation .sw-radio-variation {
+  margin: 0 2px;
+  position: relative;
+	display: inline-block;
+}
+.sw-custom-variation .sw-radio-variation span {
+  display: block;
+  height: 100%;
+  line-height: 30px;
+  min-width: 30px;
+  text-align: center;
+  min-height: 30px;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+}
+.sw-custom-variation .sw-radio-variation span.variation-color,
+.sw-custom-variation .sw-radio-variation span.variation-image {
+  text-indent: -9999px;
+  margin: 1px;
+}
+.sw-custom-variation .sw-radio-variation span.variation-image {
+  background-size: 100% 100%;
+}
+.sw-custom-variation .sw-radio-variation span:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  display: block;
+  border: 1px solid #ddd;
+}
+.sw-custom-variation .sw-radio-variation.selected span {
+  background-color: #ff5c00;
+  color: #fff;
+}
+.sw-custom-variation .sw-radio-variation.selected span:after {
+  border-color: #ff5c00;
+}
+.sw-custom-variation .sw-radio-variation.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.sw-custom-variation .sw-radio-variation.disabled span:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #ff5c00;
+  height: 44px;
+  transform: rotate(45deg);
+  top: -7px;
+  right: 15px;
+  opacity: 1;
+}
+.sw-custom-variation .sw-radio-variation .variation-tooltip {
+  position: absolute;
+  bottom: 110%;
+  z-index: 9999;
+  display: none;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.sw-custom-variation .sw-radio-variation:hover .variation-tooltip {
+  display: block;
+}
+.item-content .sw-custom-variation {
+  margin: 15px 0;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-color {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  min-width: initial;
+  min-height: initial;
+  width: 18px;
+  height: 18px;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-color:after {
+  display: none;
+}
+.item-content .sw-custom-variation .sw-radio-variation span.variation-image {
+  min-width: 40px;
+  min-height: 40px;
+}

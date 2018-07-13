@@ -1,0 +1,38 @@
+@media (max-width: 767px) {
+	.responsive-slider{
+		.slider{
+			overflow-x: auto;
+			white-space: nowrap;
+			text-align: center;
+			.item, .product {
+				display: inline-block;
+				white-space: normal;
+				float: none;
+			}
+		}
+		&.testimonial-post-slider{
+			.responsive-thumbnail{
+				display: none;
+			}
+		}
+		&.sw-category-slider-layout8{
+			.slider{
+				background: #fff;
+				margin: 0 -15px;
+				.item{
+					min-width: 120px;
+					padding: 0 15px;
+				}
+			}
+		}
+	}
+	.tab-countdown-slide &{
+		ul > li{
+			display: inline-block;
+			float: none;
+			a >img{
+				max-width: 100%;
+			}
+		}
+	}
+}

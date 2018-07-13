@@ -1,0 +1,125 @@
+.page .listing-title h1{
+	margin:40px 0 0;
+}
+.wp_left_contact {
+	color: #999999;
+	line-height: 22px;
+	h4 {
+		margin-bottom: 28px;
+		color: lighten( @body-color, 6% );
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		color: #666666;
+		li {
+			margin: 15px 0;
+			display: inline-block;
+			width: 100%;
+			i {
+				margin-right: 10px;
+				.rtl & {
+					margin-right: 0;
+					margin-left: 10px;
+				}
+			}
+			a {
+				color: #666666;
+				&:hover {
+					color: @color;
+				}
+			}
+			&.address i { font-size: 16px; }
+			&.email i { font-size: 12px; }
+			&.phone {
+				font-size: 20px;
+				a {
+					font-weight: 600;
+				}
+				i {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.wpb_gmaps_widget .wpb_wrapper {
+	padding: 0;
+	.wpb_map_wraper {
+		border: 5px solid #fff;
+	}
+}
+
+.wpcf7{
+	.wp-input {
+		margin: 0 -15px;
+		.wpcf7-form-control-wrap{
+			width:33.333%;
+			float: left;
+			padding: 0 15px;
+			input{
+				width:100%;
+				.border-radius(0);
+			}
+			input::-webkit-input-placeholder {
+		        color: #555;
+		    }
+		    input::-moz-placeholder {  
+		        color: #555;  
+		    }
+		    input:-ms-input-placeholder {  
+		        color: #555; 
+		    }
+			.wpcf7-text{
+				height:40px;
+				border:1px solid #ddd;
+				font-size:13px;
+				color:#555;
+				padding:10px 20px;
+				margin-bottom:20px;
+
+			}
+		}
+	}
+	textarea{
+		padding:10px 20px;
+		height:40px;
+		border:1px solid #ddd;
+		font-size:13px;
+		width:100%;
+		min-height:150px;
+		.border-radius(0);
+	}
+	textarea::-webkit-input-placeholder {
+        color: #555;
+    }
+    textarea::-moz-placeholder {  
+        color: #555;  
+    }
+    textarea:-ms-input-placeholder {  
+        color: #555; 
+    }
+
+	&.your-message{
+		float:none;
+		clear:both;
+	}
+	.wpcf7-submit{
+		margin-top:10px;
+		color:#fff;
+		font-size:12px;
+		text-transform:uppercase;
+		border:0;
+		background-color:@body-color;
+		height:42px;
+		line-height:42px;
+		padding:0 30px;
+		.border-radius( 42px);
+		.rtl &{
+			float: right;
+		}
+		&:hover{
+			background-color:@color;
+		}
+	}
+}

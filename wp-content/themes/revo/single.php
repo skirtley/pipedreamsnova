@@ -1,0 +1,1 @@
+<?php revo_content_detail_check() ?>

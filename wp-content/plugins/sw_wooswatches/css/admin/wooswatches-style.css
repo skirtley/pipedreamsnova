@@ -1,0 +1,121 @@
+.sw-wooswatches-panel{
+	padding: 10px 15px;
+}
+.sw-wooswatches-panel .panel-content-wrapper{
+	margin-bottom: 15px;
+}
+.sw-wooswatches-panel .panel-title{
+	background: #f1f1f1;	
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 1px;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+.sw-wooswatches-panel .panel-title > a{
+	display: block;
+	padding: 7px 15px;
+	text-decoration: none;
+	color: #333;
+	flex: 4;
+	-webkit-flex: 4;
+}
+.sw-wooswatches-panel .panel-title > a:focus{
+	box-shadow: none !important;
+}
+.sw-wooswatches-panel .panel-title:after{
+	content: '';
+	border-top: 5px solid #222;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -3px;
+	left: auto;
+	right: 15px;
+}
+.sw-wooswatches-panel .panel-title.active:after{
+	border-top: 0;
+	border-bottom: 5px solid #222;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -3px;
+	left: auto;
+	right: 15px;
+}
+.sw-wooswatches-panel .panel-title.parent-title{
+	background: #ddd;
+	margin: 0;
+}
+.sw-wooswatches-panel .panel-title.parent-title.active{
+	background: #ff9041;
+}
+.sw-wooswatches-panel .panel-title.parent-title > a{
+	padding: 10px 15px;
+}
+.sw-wooswatches-panel .panel-content.hide{
+	display: none;
+}
+.sw-wooswatches-panel .panel-content{
+	padding: 15px;
+	box-shadow: 0 0 0 1px #ddd;
+}
+.sw-wooswatches-panel .panel-title .checkbox-content {
+	width: 120px;
+	display: none;
+	height: 26px;
+	background: #333;
+	margin: 0 50px 0 0;
+	position: relative;
+	border-radius: 1px;
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+.sw-wooswatches-panel .panel-title.active .checkbox-content{
+	display: block;
+}
+.sw-wooswatches-panel .panel-title .checkbox-content:after {
+	content:  attr( data-color_title );
+	color: #fff;
+	position: absolute;
+	right: 10px;
+	z-index: 0;
+	font: 12px/26px Arial, sans-serif;
+	font-weight: bold;
+}
+.sw-wooswatches-panel .panel-title .checkbox-content:before {
+	content: attr( data-img_title );
+	color: gold;
+	position: absolute;
+	left: 10px;
+	z-index: 0;
+	font: 12px/26px Arial, sans-serif;
+	font-weight: bold;
+}
+.sw-wooswatches-panel .panel-title .checkbox-content label {
+	display: block;
+	width: 50px;
+	margin: 0;
+	height: 20px;
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 1;
+	background: #fcfff4;
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	border-radius: 1px;
+	transition: all 0.4s ease;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+}
+.sw-wooswatches-panel .panel-title .checkbox-content input[type=checkbox] {
+	visibility: hidden;
+}
+.sw-wooswatches-panel .panel-title .checkbox-content input[type=checkbox]:checked + label {
+	left: 65px;
+} 

@@ -1,0 +1,7 @@
+=== V1.0.0 =====
+ - Release plugin
+
+
+=== v1.0.1 =====
+ - Fix some error from old version
+ - Update translate language package
